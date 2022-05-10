@@ -11,12 +11,12 @@ void infixe(tree_t* a) {
     while (!end){
 
         while (cour!=NULL){
-            empilerPile(&pile, cour);
+            Empiler(&pile, cour);
             cour = cour -> Tree *left;
         }
 
-        if (!estVide(pile)){
-            cour = depilerPile(&pile);
+        if (!pile){
+            cour = Depiler(&pile);
             printf("%d", cour->value);
             cour = cour -> Tree *right;
         }
